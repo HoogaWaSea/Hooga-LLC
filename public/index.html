@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>E-Commerce Web</title>
+    <link href='https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="row">
+        <div class="dropdown">
+          <button class="dropbtn">E-Commerce
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#" class="laptop">Laptop</a>
+            <a href="#" class="smartphone">Smartphone</a>
+            <a href="#" class="smartwatch">Smart Watch</a>
+            <a href="#" class="tablet">Tablet</a>
+            <a href="#" class="gameconsole">Game console</a>
+            <a href="#" class="tv">TV</a>
+          </div>
+        </div>
+        <div>
+          <input id="search-bar" type="text">
+          <button id="search-btn" disabled>Search</button>
+        </div>
+        <div>
+          <button id="login-btn">Log in</button>
+          <button id="logout-btn">Log out</button>
+          <button id="order-btn">Orders</button>
+        </div>
+      </header>
+      <main>
+        <article id='electronics'>
+          <!-- home view -->
+          <section id='home'>
+            <button id="grid-btn">Grid</button>
+            <button id="list-btn">List</button>
+            <!-- list view -->
+            <article id="list-view" class="card-list hidden">
+              <img src="img/iPhone-13.png" alt="iPhone 13">
+              <!-- This image was found on https://www.apple.com/shop/buy-iphone/iphone-13-pro -->
+              <div>
+                <p class="product-name">iPhone 13</p>
+                <p>This is the newest version of iPhone.</p>
+                <p>Price</p>
+                <p>Rating</p>
+                <p>In Stock</p>
+              </div>
+            </article>
+
+            <!-- grid view -->
+            <article id="grid-view" class="card-grid hidden">
+              <img src="img/iPhone-13.png" alt="iPhone 13">
+              <!-- This image was found on https://www.apple.com/shop/buy-iphone/iphone-13-pro -->
+              <div>
+                <p class="product-name">iPhone 13</p>
+                <p>This is the newest version of iPhone.</p>
+                <p>Price</p>
+                <p>Rating</p>
+                <p>In Stock</p>
+              </div>
+            </article>
+          </section>
+
+          <!-- product detail view -->
+          <section id='product' class=''>
+            <article class="card-list">
+              <img src="img/iPhone-13.png" alt="iPhone 13">
+              <!-- This image was found on https://www.apple.com/shop/buy-iphone/iphone-13-pro -->
+              <div>
+                <p class="product-name">iPhone 13</p>
+                <p>This is the newest version of iPhone.fffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+                <p>Price</p>
+                <p>Rating</p>
+                <p>In Stock</p>
+              </div>
+              <button id="buy-btn">Buy</button>
+            </article>
+          </section>
+
+          <!-- order view -->
+          <section id='order' class='hidden'>
+            <article class="card-list">
+              <img src="img/iPhone-13.png" alt="iPhone 13">
+              <!-- This image was found on https://www.apple.com/shop/buy-iphone/iphone-13-pro -->
+              <div>
+                <p class="product-name">iPhone 13</p>
+                <p>This is the newest version of iPhone.</p>
+                <p>Price</p>
+                <p>Rating</p>
+                <p>Confirmation number</p>
+              </div>
+            </article>
+          </section>
+
+          <!-- login view -->
+          <section id="login-view">
+            <section id='login' class='hidden'>
+              <h2>Login</h2>
+              <form>
+                <label for='username'>Username</label>
+                <input type='text' id='username' name='username' required>
+                <label for='password'>Password</label>
+                <input type='text' id='password' name='password' required>
+                <button>Login</button>
+              </form>
+            </section>
+          </section>
+
+          <!-- sign up view -->
+          <section id="signup-view">
+            <section id='signup' class='hidden'>
+              <h2>Sign up</h2>
+              <form>
+                <label for='email'>Email</label>
+                <input type='text' id='email' name='email' required>
+                <label for='username'>Username</label>
+                <input type='text' id='username' name='username' required>
+                <label for='password'>Password</label>
+                <input type='text' id='password' name='password' required>
+                <button>Sign up</button>
+              </form>
+            </section>
+          </section>
+
+        </article>
+      </main>
+      <footer class="row center">All right reserved</footer>
+    </div>
+  </body>
+</html>
