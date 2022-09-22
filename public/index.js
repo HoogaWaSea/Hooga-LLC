@@ -61,3 +61,98 @@
       .then(resp => resp.json())
       .then(processData)
       .catch(handleError);
+
+
+      async function statusCheck(response) {
+        if (!response.ok) {
+          throw new Error(await response.json());
+        }
+        return response;
+      }
+  
+      function processData(responseData) {
+        if (id("search-bar").value.trim().length > 0) {
+          // display only the products related to the search keyword
+          displaySearchedProducts(responseData);
+        } else {
+          // display all the products
+          displayAllProducts(responseData);
+        }
+        id("search-btn").disabled = true;
+      }
+    }
+  
+    function login() {
+      let data = new FormData();
+      data.append("username", username);
+      data.append("password", password);
+      fetch("/login", {method: "POST", body: data})
+        .then(statusCheck)
+        .then(resp => resp.text())
+        .then(processData)
+        .catch(handleError);
+
+
+
+        async function statusCheck(response) {
+          if (!response.ok) {
+            throw new Error(await response.text());
+          }
+          return response;
+        }
+    
+        function processData(responseData) {
+    
+        }
+      }
+    
+      function signUp() {
+        let data = new FormData();
+        data.append("email", email);
+        data.append("username", username);
+        data.append("password", password);
+        fetch("/signup", {method: "POST", body: data})
+          .then(statusCheck)
+          .then(resp => resp.text())
+          .then(processData)
+          .catch(handleError);
+
+      
+          async function statusCheck(response) {
+            if (!response.ok) {
+              throw new Error(await response.text());
+            }
+            return response;
+          }
+      
+          function processData(responseData) {
+      
+          }
+        }
+      
+        function addToCart() {
+          let data = new FormData();
+          data.append("product", product);
+          fetch("/signup", {method: "POST", body: data})
+            .then(statusCheck)
+            .then(resp => resp.text())
+            .then(processData)
+            .catch(handleError);
+
+        
+            async function statusCheck(response) {
+              if (!response.ok) {
+                throw new Error(await response.text());
+              }
+              return response;
+            }
+        
+            function processData(responseData) {
+        
+            } 
+
+            function handleError(error) {
+              console.log(error);
+            }
+              
+       
